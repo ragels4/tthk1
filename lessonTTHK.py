@@ -29,10 +29,12 @@ print (show+" "+year + " " +producer + " " + actor1 + "and" " " +actor2)
 favanimal = input("Input ur fav animal: ")
 print("My fav animal is: " + favanimal)
 
-height = float(input("Input height "))
-width = float(input("Input width "))
+#str() - text to number
+#int() - number to text
+height = int(input("Input height "))
+width = int(input("Input width "))
 circumfrence = 2 * (height + width)
 area = (height * width)
-
-print ("circumfrence: ", circumfrence)
-print ("width: ", width)
+print (" ")
+print ("Circumfrence: ", circumfrence)
+print ("Width: ", width)
