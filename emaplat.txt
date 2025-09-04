@@ -1,0 +1,32 @@
+motherboard
+Emaplaat
+
+Emaplaat on see, mille külge ühendatakse kõik arvuti komponendid, näiteks graafikakaart, protsessor või muutmälu.
+Protsessori pesa on koht, kuhu protsessor paigaldatakse. Ja pesasid on palju, seega peate enne ostmist veenduma, et see sobib protsessoriga. Näiteks on Inteli pesasid nagu LGA1700 või LGA1200.
+Mälu tüüp - DDR5, 4 või 3. Põhimõtteliselt on DDR5 kiireim muutmälu tüüp, mida arvutisse saab panna, sellel on suurim kiirused ajutise teabe edastamiseks.
+Kiibistik - ühendus protsessoriga. Põhimõtteliselt peate enne ostmist veenduma, et teie emaplaat toetab teatud protsessori kiibistikku.
+Mälukiibid, mis tavaliselt sisaldavad ainult BIOS-i, aga nüüd näete UEFI-d sagedamini. See on põhimõtteliselt nagu BIOS, aga uuem, sellel on graafiline liides ja kõik muu vajalik.
+
+PCIE pesad, kuhu saab panna graafikakaardi, helikaardi või videokaardi.
+
+
+Kella generaator, mis sünkroniseerib protsessori kellasagedust ja mida saab kasutada ka protsessori ülekiirendamiseks, kui see toetab ülekiirendamist.
+
+
+Lisaks on emaplaadil kõik USB-pordid, mida saab kasutada teiste seadmete ühendamiseks, näiteks klaviatuuri, hiire, kõrvaklappide, mälupulga või isegi telefoni laadija.
+								
+
+
+
+
+
+motherboard is the thing u Connect all the pc components like a gpu cpu or ram.
+Cpu socket is where u install the processor. and there are many sockets so u have to make sure that it matches the cpu before u buy it. there are intel sockets like LGA1700 or LGA1200 for example
+Ram type - ddr5 or 4 or 3. basically ddr5 is the fastest type of ram u can get into a Computer, it has the highest speeds of transferring temporary info
+chipset - connection to cpu basically, u have to make sure ur motherboard supports a certain cpu chipset before bying.
+memory chips that usually just contain BIOS, but now u can see UEFI more often. its basically like bios but newer, it has a graphical interface and all that
+PCIE slots that u can put a GPU in or a sound card or a video recording card
+clock generaator which syncs the clock speed for the CPU and -
+- can also be used to Overclock the cpu if it supports overclocking
+Also the motherboard has all the USB ports u will be using to Connect other devices like-
+- a keyboard, mouse, headphones, flashdrive, or even a charger for ur phone.
