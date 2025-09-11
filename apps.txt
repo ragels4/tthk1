@@ -1,0 +1,5 @@
+Applications          Latest Version          Oldest Version          Q1-Which version launches?          Q2-Does it require any additional dependencies?          Q3-When was the programm released           Which version of windows is required for it?
+
+Teamspeak             6.0.0beta               3.2                      6.0.0beta                          .Net framework 4.6.1, or 3.4 for oldest version          Teamspeak released in 2002                  Atleast windows7 for latest version
+
+
