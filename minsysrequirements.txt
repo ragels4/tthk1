@@ -1,0 +1,64 @@
+PC1:
+CPU - Intel i3 (2.0GHz)
+Ram - 4GB
+GPU - Integrated
+HDD - 500GB
+
+Microsoft Office 2019:
+PC1 meets the minimum system requirements for Office
+It has more then 1.6GHz, the processor support DirectX10 (though it requires only directx9)
+just enough ram, and more then enough space
+for the installation of the programm. The experience wont be SMOOTH, but
+it will work good enough
+
+Photoshop 2023:
+It will absolutely not run on this pc, the programm requiers directx12 support
+though intel i3 only support directx9, the programm also needs 8gb of ram minimum
+which is way more then we have. Well we have enough space for installation but
+that doesnt matter
+
+Blender:
+Blender will not run as well because it lacks the ram amount
+and i couldnt find any more specific requirement
+
+
+
+
+PC2:
+CPU - Intel i7 (3.2GHz)
+RAM - 16GB
+GPU - GTX1650 with 4GB VRAM
+SSD - 512GB
+
+AutoCad:
+It will absolutely run, it meets all the minimum system requirements,
+has enough ram and GHz
+
+Minecraft:
+It meets the minumum system requirements, BUT BARELY, it will totally function
+but it wont be a pleasent experience.
+
+Blender 3D:
+It will not run on it, since it lacks the VRAM amount. It does have enough ram
+but the gpu will struggle A TON. Wont work
+
+
+
+
+PC3:
+CPU - Ryzen3 (3.0GHz)
+RAM - 8GB
+GPU - Integrated
+HDD - 1TB
+
+LoL:
+It meets the minumum requirements, the gpu is like on the EDGE of the 
+minimum requirements, plenty of ram, and the processor is good enough
+
+Photoshop:
+Yes it will work, meets all the requirements
+
+Chrome:
+Yes it will run pretty easily, 8gb of ram is gonna be plenty for a few tabs
+Well it is just a browsers
+
