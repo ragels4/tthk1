@@ -1,10 +1,6 @@
 #Exercise1 - Time of Day
 hrs = int(input("Input the time (1-24): "))
-25
-if hrs >= 25:
-    print("Incorrect Time")
-    exit()
-elif hrs <= 6:
+if hrs <= 6:
     print("Night")   
 elif hrs <= 12:
     print("Morning")
@@ -42,17 +38,26 @@ print("")
 print("=============================================")
 print("")
 
-#Exercise4 - Choice of travel
-trp = input("Choose a vehicle ")
-wth = input("Enter current weather (Rainy or Sunny) ")
-if trp == "Bus" and wth == "Sunny":
-    print ("Comfy bus ride it is!")
-elif trp == "Walk" and wth == "Sunny":
-    print ("We'll walk then!")
-elif trp == "Bus" and wth == "Rainy":
-    print ("A bus ride through the rain")
-elif trp == "Walk" and wth == "Rainy":
-    print("We'll grab an umbrella!")
+    
+#Exercise4 - By the scheme
+trp2 = input("Choose transport ")
+wth2 = input("Whats the weather? ")
+
+if trp2 == "Bus":
+    if wth2 == "Rain":
+        print("Bus ride through rain")
+    else: print("Comfy bus ride")
+else:
+    if wth2 == "Rain":
+        print("We'll take an umbrella")
+    else:
+        print("Comfy walk")
+        
+
+    
+
+
+    
 print("")
 print("=============================================")
 print("")
@@ -72,6 +77,16 @@ elif ftp == "Vegetable" and sos == "Sour":
     print("Thats a sour vegetable!")
 elif ftp == "Vegetable" and sos:
     print("A regular vegetable")
+
+print("")
+print("=============================================")
+print("")
+    
+#Exercise5 - Alternative
+
+fod = input("Fruit or Vegetable? ")
+stp = input("Sweet or Sour? ")
+print (stp + " " + fod)
     
     
 
