@@ -14,8 +14,6 @@ Set-Content -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Value "Hello, 
 # Adds text to the file (without removing old text)
 Add-Content -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Value "Another line"
 
-# Creates another folder on Desktop
-New-Item -Path "$env:USERPROFILE\Desktop\NewFolder" -ItemType Directory
 
 # Moves the text file to the new folder
 Move-Item -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Destination "$env:USERPROFILE\Desktop\NewFolder"
