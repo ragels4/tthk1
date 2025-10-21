@@ -1,11 +1,9 @@
 import random
 
-# Welcome message
 print("========================================")
 print("             YO GURT WASSUP             ")
 print("========================================")
 
-# Player character selection
 print("1 - SPARTAN\nLegendary rebel leader, master of sword and shield\nHealth - 100\nStamina - 60\n")
 print("2 - KRIKSU\nA fierce Gaul who crusades his enemies with a two-handed sword\nHealth - 120\nStamina - 40\n")
 print("3 - FLAMMA\nFast as the wind, deadly trident and net\nHealth - 90\nStamina - 70\n")
@@ -13,7 +11,6 @@ print("4 - COMMODUS\nRoman emperor who thirsts for blood in the arena\nHealth - 
 
 usrchar = input("Choose 1-4: ")
 
-# Set player stats based on choice
 if usrchar == "1":
     pmaxhealth, phealth = 100, 100
     pmaxstamina, pstamina = 60, 60
@@ -27,7 +24,6 @@ else:
     pmaxhealth, phealth = 110, 110
     pmaxstamina, pstamina = 50, 50
 
-# Opponent selection
 print("\nNow, choose your opponent:")
 print("1 - SPARTAN\nLegendary rebel leader, master of sword and shield\nHealth - 100\nStamina - 60")
 print("2 - FLAMMA\nFast as the wind, deadly trident and net\nHealth - 90\nStamina - 70")
@@ -35,7 +31,6 @@ print("3 - COMMODUS\nRoman emperor who thirsts for blood in the arena\nHealth - 
 
 enmchar = input("Choose 1-3: ")
 
-# Set enemy stats based on choice
 if enmchar == "1":
     emaxhealth, ehealth = 100, 100
     emaxstamina, estamina = 60, 60
@@ -47,13 +42,12 @@ else:
     emaxstamina, estamina = 50, 50
 
 actions = ["Attack", "Rest", "Defend"]
+defending = False 
 
-# Main game loop
 while phealth > 0 and ehealth > 0:
     print(f"\nYour health: {phealth} / {pmaxhealth}, Stamina: {pstamina} / {pmaxstamina}")
     print(f"Enemy health: {ehealth} / {emaxhealth}, Stamina: {estamina} / {emaxstamina}")
 
-    # Player turn
     print("\nYour turn! Choose an action:")
     print("1 - Crushing blow with an axe (15 stamina)")
     print("2 - Intimidating roar (10 stamina)")
@@ -61,7 +55,6 @@ while phealth > 0 and ehealth > 0:
     print("4 - Rest (restores 20 stamina)")
     choice = int(input("Enter the number of your choice: "))
 
-    # Player action handling
     if choice == 1:
         if pstamina >= 15:
             pstamina -= 15
@@ -77,8 +70,6 @@ while phealth > 0 and ehealth > 0:
         print("\nYou roar loudly, boosting your morale and stamina!")
     elif choice == 3:
         print("\nYou assume a battle stance, preparing for the enemy's attack.")
-        # Defensive stance logic handled during enemy attack
-        # For simplicity, we'll set a flag
         defending = True
     elif choice == 4:
         pstamina += 20
@@ -90,14 +81,11 @@ while phealth > 0 and ehealth > 0:
         print("Invalid choice, turn skipped.")
         defending = False
 
-    # Enemy turn
     enemy_action = random.choice(actions)
     print(f"\nEnemy chooses to: {enemy_action}")
 
-    # Handle enemy action
     if enemy_action == "Attack":
-        # Check if player is defending
-        if 'defending' in locals() and defending:
+        if defending:
             damage = random.randint(5, 15)
             print(f"The enemy attacks, but you defend successfully and take only {damage} damage!")
             phealth -= damage
@@ -105,17 +93,16 @@ while phealth > 0 and ehealth > 0:
             damage = random.randint(25, 35)
             print(f"The enemy attacks and deals {damage} damage!")
             phealth -= damage
-        # Reset defending status after attack
-        if 'defending' in locals():
-            del defending
+        defending = False
     elif enemy_action == "Rest":
         estamina += 20
         if estamina > emaxstamina:
             estamina = emaxstamina
         print("The enemy rests and regains stamina!")
+        defending = False
     elif enemy_action == "Defend":
         print("The enemy defends this round!")
-    
+        defending = True
 
     if phealth <= 0:
         print("\nYou have been defeated! Game over.")
