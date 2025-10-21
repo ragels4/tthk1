@@ -3,20 +3,18 @@
 # ============================================
 
 # Creates folder on Desktop
-New-Item -Path "$env:USERPROFILE\Desktop\MyFolder" -ItemType Directory
+New-Item -Path "C:\Users\$env:USERNAME\Desktop\MyFolder" -ItemType Directory
 
 # Creates text file inside that folder
-New-Item -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -ItemType File
+New-Item -Path "C:\Users\$env:USERNAME\Desktop\MyFolder\myfile.txt" -ItemType File
 
 # Writes text into the file (overwrites existing text)
-Set-Content -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Value "Hello, World!"
+Set-Content -Path "C:\Users\$env:USERNAME\Desktop\MyFolder\myfile.txt" -Value "Hello, World!"
 
 # Adds text to the file (without removing old text)
-Add-Content -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Value "Another line"
-
+Add-Content -Path "C:\Users\$env:USERNAME\Desktop\MyFolder\myfile.txt" -Value "Another line"
 
 # Moves the text file to the new folder
-Move-Item -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Destination "$env:USERPROFILE\Desktop\NewFolder"
+Move-Item -Path "C:\Users\$env:USERNAME\Desktop\MyFolder\myfile.txt" -Destination "C:\Users\$env:USERNAME\Desktop\NewFolder"
 
-# ============================================
 # ============================================
