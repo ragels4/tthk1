@@ -1,0 +1,24 @@
+# ============================================
+# PowerShell Cheat Sheet — Basic File Commands
+# ============================================
+
+# Creates folder on Desktop
+New-Item -Path "$env:USERPROFILE\Desktop\MyFolder" -ItemType Directory
+
+# Creates text file inside that folder
+New-Item -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -ItemType File
+
+# Writes text into the file (overwrites existing text)
+Set-Content -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Value "Hello, World!"
+
+# Adds text to the file (without removing old text)
+Add-Content -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Value "Another line"
+
+# Creates another folder on Desktop
+New-Item -Path "$env:USERPROFILE\Desktop\NewFolder" -ItemType Directory
+
+# Moves the text file to the new folder
+Move-Item -Path "$env:USERPROFILE\Desktop\MyFolder\myfile.txt" -Destination "$env:USERPROFILE\Desktop\NewFolder"
+
+# ============================================
+# ============================================
