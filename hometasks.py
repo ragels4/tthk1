@@ -139,9 +139,6 @@ while True:
 print("\nCleaned Text:")
 print(sanitized_text)
 
-# C) Nimesiltide generaator komadega loendist
-
-inpt = str(input("Input text"))
 
 # C) Nimesiltide generaator komadega loendist (No split, no reused vars)
 
@@ -164,3 +161,4 @@ while index < len(name_input):
 
 if current_name.strip() != "":
     print(f"Hello, {current_name.strip().title()}!")
+
