@@ -139,5 +139,28 @@ while True:
 print("\nCleaned Text:")
 print(sanitized_text)
 
+# C) Nimesiltide generaator komadega loendist
 
+inpt = str(input("Input text"))
 
+# C) Nimesiltide generaator komadega loendist (No split, no reused vars)
+
+name_input = input("Enter comma-separated names: ")
+
+index = 0
+current_name = ""
+
+while index < len(name_input):
+    char = name_input[index]
+
+    if char != ',':
+        current_name += char
+    else:
+        cleaned = current_name.strip()
+        if cleaned != "":
+            print(f"Hello, {cleaned.title()}!")
+        current_name = ""  
+    index += 1
+
+if current_name.strip() != "":
+    print(f"Hello, {current_name.strip().title()}!")
