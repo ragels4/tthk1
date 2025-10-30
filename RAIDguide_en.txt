@@ -1,0 +1,48 @@
+HOW TO CREATE A RAID SYSTEM on ubuntu linux
+
+1 - Make sure everything is updated on ur system, get the basic utilities (this will add commands like cat, or ls) AND install the mdadm tool. So run those commands:
+	sudo apt update
+	sudo apt upgrade
+	sudo apt install coreutils
+	sudo apt install mdadm
+	
+2 - Okay once we got that out the way lets prepare our disks for RAID. (u CANNOT use the disk where ur OS is installed, as the disk has to be empty). By entering the first command u will enter a configuration menu lets call it that. Just follow the commands:
+	sudo fdisk /dev/sdb 	#Enter the config menu ig
+	n			#Create a new partition
+	p			#Lets make it primary
+	1			#Create partition 1 (which is the default option)
+				#Just press enter to get the default values of sectors
+	t			
+	fd			#Change the partition type to Linux RAID
+	w			#Save and exit!
+	
+	#Now repeat the same thing but for the sdc disk, same thing
+	
+3 - Now lets create the RAID1 array with sdb and sdc disks and check the status of the RAID
+	sudo mdadm --create /dev/md0 --raid-devices=2 --level=1 /dev/sdb1 /dev/sdc1
+	cat /proc/mdstat
+	
+4 - Now lets format the RAID array, and then mount it.
+	sudo mkfs.ext4 /dev/md0
+	sudo mkdir /mnt/raid
+	sudo mount /dev/md0 /mnt/raid
+	
+5 - Great, now lets set it to auto-mount on boot. This is gonna be a tricky one
+	sudo blkid /dev/md0		#Find the UUID of the new RAID array
+	sudo nano /etc/fstab		#Add the following entry to this text file
+	UUID="dafc7008-30ee-49e1-aacd-d0ac05670bb5" /mnt/raid ext4 defaults 0 2 
+	
+	#This is just an example of my prompt would look like, but U will have to enter 	YOUR OWN UUID, so this is just what mine would look like.
+	
+6 - OOOO goddamn okay, now lets just check the raid status, see that everything is running and allat.
+
+	sudo mdadm --detail /dev/md0
+	
+	
+	
+	
+	
+	
+
+	
+
