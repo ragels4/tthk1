@@ -25,21 +25,32 @@ else:
     pmaxstamina, pstamina = 50, 50
 
 print("\nNow, choose your opponent:")
-print("1 - SPARTAN\nLegendary rebel leader, master of sword and shield\nHealth - 100\nStamina - 60")
-print("2 - FLAMMA\nFast as the wind, deadly trident and net\nHealth - 90\nStamina - 70")
-print("3 - COMMODUS\nRoman emperor who thirsts for blood in the arena\nHealth - 110\nStamina - 50")
+print("1 - SPARTAN\nLegendary rebel leader, master of sword and shield\nHealth - 100\nStamina - 60\n")
+print("2 - KRIKSU\nA fierce Gaul who crusades his enemies with a two-handed sword\nHealth - 120\nStamina - 40\n")
+print("3 - FLAMMA\nFast as the wind, deadly trident and net\nHealth - 90\nStamina - 70\n")
+print("4 - COMMODUS\nRoman emperor who thirsts for blood in the arena\nHealth - 110\nStamina - 50\n")
 
-enmchar = input("Choose 1-3: ")
+enmchar = input("Choose 1-4: ")
+
+while usrchar == enmchar:
+    print("\nYou cant pick 2 same characters!:")
+    enmchar = input("Choose 1-4: ")
+if usrchar != enmchar:
+    print("Characters chosen. Let the battle begin!")
 
 if enmchar == "1":
     emaxhealth, ehealth = 100, 100
     emaxstamina, estamina = 60, 60
 elif enmchar == "2":
+    emaxhealth, ehealth = 120, 120
+    emaxstamina, estamina = 40, 40
+elif enmchar == "3":
     emaxhealth, ehealth = 90, 90
-    emaxstamina, estamina = 70, 70
+    pmaxstamina, estamina = 70, 70
 else:
     emaxhealth, ehealth = 110, 110
-    emaxstamina, estamina = 50, 50
+    pmaxstamina, estamina = 50, 50
+
 
 actions = ["Attack", "Rest", "Defend"]
 defending = False 
