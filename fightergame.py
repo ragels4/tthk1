@@ -49,7 +49,7 @@ elif enmchar == "3":
     pmaxstamina, estamina = 70, 70
 else:
     emaxhealth, ehealth = 110, 110
-    pmaxstamina, estamina = 50, 50
+    emaxstamina, estamina = 50, 50
 
 
 actions = ["Attack", "Rest", "Defend"]
@@ -120,4 +120,5 @@ while phealth > 0 and ehealth > 0:
         break
     if ehealth <= 0:
         print("\nCongratulations! You won the fight!")
+
         break
