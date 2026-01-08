@@ -1,0 +1,11 @@
+# A children's game. If a number is dividible by 3 it prints Fizz, if dividable by 5 it prints buzz
+i = 0
+while i < 100:
+  i = i + 1
+  if i % 3 == 0:
+    print("Fizz")
+  elif i % 5 == 0:
+    print("Buzz")
+  else:
+    print(i)
+  
