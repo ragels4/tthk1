@@ -46,7 +46,7 @@ elif enmchar == "2":
     emaxstamina, estamina = 40, 40
 elif enmchar == "3":
     emaxhealth, ehealth = 90, 90
-    pmaxstamina, estamina = 70, 70
+    emaxstamina, estamina = 70, 70
 else:
     emaxhealth, ehealth = 110, 110
     emaxstamina, estamina = 50, 50
